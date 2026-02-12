@@ -11,5 +11,7 @@ export default defineConfig({
     },
   },
 
-  base: "/photoAlbum/",
+  // Для GitHub Pages: если репо photoAlbum — оставь "/photoAlbum/".
+  // Если страница пустая — попробуй "./" (относительные пути).
+  base: "./",
 });
