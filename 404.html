@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting…</title>
+  <script>
+    (function() {
+      var segments = location.pathname.split('/').filter(Boolean);
+      var base = segments.length ? '/' + segments[0] + '/' : '/';
+      var path = location.pathname;
+      var rest = path.slice(base.length) || '/';
+      var hash = rest.startsWith('/') ? rest : '/' + rest;
+      location.replace(base + '#' + hash);
+    })();
+  </script>
+</head>
+<body><p>Redirecting…</p></body>
+</html>
